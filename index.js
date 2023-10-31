@@ -1,11 +1,11 @@
+const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
+
 const returnFirstTwoDrivers = function(drivers) {
-    drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
-    return drivers.splice(0,2);
+    return drivers.slice(0,2);
   }
 
 const returnLastTwoDrivers = (drivers) => {
-    drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
-    return drivers.splice(2,4);
+    return drivers.slice(2,4);
 }
 
 const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
@@ -20,20 +20,22 @@ const fareDoubler = createFareMultiplier(2);
 
 const fareTripler = createFareMultiplier(3);
 
+// function selectDifferentDrivers(drivers, selectDrivers) {
+//     drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
+//     if (selectDrivers === returnFirstTwoDrivers) {
+//         return returnFirstTwoDrivers();
+//     } else if (selectDrivers === returnLastTwoDrivers) {
+//         return returnLastTwoDrivers();
+//     } 
+// }
+
 function selectDifferentDrivers(drivers, selectDrivers) {
-    drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
-    if (selectDrivers === returnFirstTwoDrivers) {
-        return returnFirstTwoDrivers();
-    } else if (selectDrivers === returnLastTwoDrivers) {
-        return returnLastTwoDrivers();
-    } 
+    return selectDrivers(drivers);
 }
 
-
-returnFirstTwoDrivers();
-returnLastTwoDrivers();
-createFareMultiplier();
-
+// returnFirstTwoDrivers();
+// returnLastTwoDrivers();
+// createFareMultiplier();
 
 
 
